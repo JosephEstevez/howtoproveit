@@ -1,4 +1,4 @@
-# 📘 howtoproveit
+# 📘 proofs-from-howtoproveit
 
 This is a personal project where I work through the exercises from *How to Prove It: A Structured Approach* by Daniel J. Velleman.
 
