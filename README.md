@@ -1,13 +1,24 @@
-# 📘 proofs-from-howtoproveit
+# How to Prove It — Formal Proof Project
 
-This is a personal project where I work through the exercises from *How to Prove It: A Structured Approach* by Daniel J. Velleman.
+This repository contains structured notes and formal solutions (in LaTeX) to exercises from *"How to Prove It: A Structured Approach"* by Daniel J. Velleman.
 
-The goal is simple: solve each problem and write a clear, formal proof — both to sharpen my own proof-writing skills and to build a resource that could help others studying the same book.
+## 🎯 Objective
 
-## ✍️ What you'll find here
+- Deepen understanding of logic, set theory, and proof strategies.
+- Practice writing rigorous, formal mathematical proofs.
+- Build a solid academic foundation and showcase technical ability.
 
-- My solutions to selected exercises, organized by chapter  
-- Fully written formal proofs, focused on clarity and rigor  
-- Occasional comments or informal outlines when helpful  
+## 📁 Structure
 
-> 🛠️ Work in progress.
+Each chapter is in the `chapters/` folder and includes:
+- `summary.md`: concise summary of the key concepts.
+- `solved_exercises.tex`: LaTeX file with formal proofs of the exercises.
+
+Other folders:
+- `resources/`: custom LaTeX commands, templates, and bibliography file.
+- `compiled/`: output folder for compiled PDFs (ignored by git).
+
+## ⚠️ Disclaimer
+
+This is a personal and non-commercial academic project. All rights to the textbook content belong to the original author and publisher.
+
