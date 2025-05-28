@@ -1,11 +1,10 @@
 *.aux
 *.log
+*.pdf
 *.out
 *.toc
-*.pdf
-*.bbl
-*.blg
-*.synctex.gz
-*.fdb_latexmk
 *.fls
-compiled/
+*.fdb_latexmk
+*.synctex.gz
+*.bak
+build/output/*
