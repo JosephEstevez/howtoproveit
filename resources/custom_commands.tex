@@ -1,19 +1,103 @@
-% Theorem Environments
+% ============================================================================
+% CUSTOM COMMANDS FOR MATHEMATICAL PROOFS
+% Enhanced version for "How to Prove It" exercises
+% ============================================================================
+
+% ----------------------------------------------------------------------------
+% THEOREM ENVIRONMENTS
+% ----------------------------------------------------------------------------
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{definition}[theorem]{Definition}
 \newtheorem{corollary}[theorem]{Corollary}
 \newtheorem{proposition}[theorem]{Proposition}
 \newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{claim}[theorem]{Claim}
 
-% Common Sets
-\newcommand{\N}{\mathbb{N}}
-\newcommand{\Z}{\mathbb{Z}}
-\newcommand{\Q}{\mathbb{Q}}
-\newcommand{\R}{\mathbb{R}}
-\newcommand{\C}{\mathbb{C}}
-\newcommand{\powerset}{\mathcal{P}}
+% Proof environment (if not using amsthm)
+\newenvironment{solution}{\begin{proof}[Solution]}{\end{proof}}
 
-% Shortcuts
-\newcommand{\st}{\text{ such that }}
-\newcommand{\then}{\Rightarrow}
+% ----------------------------------------------------------------------------
+% COMMON MATHEMATICAL SETS
+% ----------------------------------------------------------------------------
+\newcommand{\N}{\mathbb{N}}          % Natural numbers
+\newcommand{\Z}{\mathbb{Z}}          % Integers
+\newcommand{\Q}{\mathbb{Q}}          % Rational numbers
+\newcommand{\R}{\mathbb{R}}          % Real numbers
+\newcommand{\C}{\mathbb{C}}          % Complex numbers
+\newcommand{\powerset}{\mathcal{P}}  % Power set
+\newcommand{\emptySet}{\emptyset}    % Empty set
+
+% ----------------------------------------------------------------------------
+% SET OPERATIONS
+% ----------------------------------------------------------------------------
+\newcommand{\union}{\cup}            % Union
+\newcommand{\intersection}{\cap}     % Intersection
+\newcommand{\setdiff}{\setminus}     % Set difference
+\newcommand{\symdiff}{\triangle}     % Symmetric difference
+\newcommand{\Sub}{\subseteq}         % Subset (inclusive)
+\newcommand{\Sup}{\supseteq}         % Superset (inclusive)
+\newcommand{\propersubset}{\subsetneq} % Proper subset
+\newcommand{\propersupset}{\supsetneq} % Proper superset
+
+% ----------------------------------------------------------------------------
+% LOGICAL OPERATORS AND SYMBOLS
+% ----------------------------------------------------------------------------
+\newcommand{\st}{\text{ such that }} % "such that"
+\newcommand{\then}{\Rightarrow}      % Implication (legacy)
+\newcommand{\imp}{\Rightarrow}       % Implies
+\newcommand{\biconditional}{\Leftrightarrow} % If and only if
+\newcommand{\contradiction}{\Rightarrow\Leftarrow} % Contradiction symbol
+\newcommand{\NOT}{\neg}              % Logical not
+\newcommand{\AND}{\wedge}            % Logical and
+\newcommand{\OR}{\vee}               % Logical or
+
+% ----------------------------------------------------------------------------
+% INTERVALS
+% ----------------------------------------------------------------------------
+\newcommand{\openint}[2]{(#1, #2)}     % Open interval
+\newcommand{\closedint}[2]{[#1, #2]}   % Closed interval
+\newcommand{\halfopen}[2]{[#1, #2)}    % Half-open interval [a,b)
+\newcommand{\halfclosed}[2]{(#1, #2]}  % Half-closed interval (a,b]
+
+% ----------------------------------------------------------------------------
+% FUNCTIONS AND RELATIONS
+% ----------------------------------------------------------------------------
+\newcommand{\domain}{\text{dom}}     % Domain
+\newcommand{\range}{\text{ran}}      % Range
+\newcommand{\image}{\text{im}}       % Image
+\newcommand{\restrict}[2]{{#1}|_{#2}} % Function restriction
+\newcommand{\compose}{\circ}         % Function composition
+\newcommand{\id}{\text{id}}          % Identity function
+
+% ----------------------------------------------------------------------------
+% PROOF SHORTCUTS
+% ----------------------------------------------------------------------------
+\newcommand{\QED}{\hfill\blacksquare}       % QED symbol
+\newcommand{\WLOG}{\text{WLOG}}             % Without loss of generality
+\newcommand{\ie}{\text{i.e.}}              % That is
+\newcommand{\eg}{\text{e.g.}}              % For example
+\newcommand{\hence}{\text{Hence}}          % Hence
+\newcommand{\thus}{\text{Thus}}            % Thus
+
+% ----------------------------------------------------------------------------
+% QUANTIFIERS (alternative symbols)
+% ----------------------------------------------------------------------------
+\newcommand{\forsome}{\exists}       % There exists
+\newcommand{\All}{\forall}           % For all (explicit for clarity)
+\newcommand{\unique}{\exists!}       % There exists unique
+
+% ----------------------------------------------------------------------------
+% COMMON ABBREVIATIONS
+% ----------------------------------------------------------------------------
+\newcommand{\wrt}{\text{w.r.t.}}     % With respect to
+\newcommand{\ste}{\text{s.t.}}       % Such that (short form)
+\newcommand{\resp}{\text{resp.}}     % Respectively
+
+% ----------------------------------------------------------------------------
+% SPECIAL FORMATTING
+% ----------------------------------------------------------------------------
+\newcommand{\highlight}[1]{\textbf{#1}}           % Highlight important text
+\newcommand{\vocab}[1]{\textit{#1}}               % Vocabulary terms
+\newcommand{\case}[1]{\textbf{Case #1:}}          % Case labels in proofs

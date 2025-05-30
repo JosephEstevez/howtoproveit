@@ -1,23 +1,128 @@
 \documentclass[11pt]{article}
+
+% ============================================================================
+% PACKAGE IMPORTS
+% ============================================================================
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+% Mathematics packages
 \usepackage{amsmath, amssymb, amsthm}
-\usepackage{enumitem}
+\usepackage{mathtools}
+
+% Page layout and formatting
 \usepackage{geometry}
 \geometry{margin=1in}
-\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{parskip}
 
-% Load custom commands
+% References and links
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    citecolor=red
+}
+\usepackage{cleveref}
+
+% Headers and footers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{How to Prove It - Exercises}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% Load custom commands (adjust path as needed)
 \input{../resources/custom_commands.tex}
 
-\title{Chapter X – [Chapter Title]}
+% ============================================================================
+% DOCUMENT INFORMATION
+% ============================================================================
+\title{Chapter X -- [Chapter Title]}
 \author{[Your Name]}
 \date{\today}
 
+% ============================================================================
+% DOCUMENT CONTENT
+% ============================================================================
 \begin{document}
 
 \maketitle
+\thispagestyle{empty} % Remove header from title page
+
+% Optional: Table of contents for longer chapters
+% \tableofcontents
+% \newpage
+
+% ============================================================================
+% EXERCISE SECTIONS
+% ============================================================================
 
 \section*{Exercise X.X}
-[Write your formal proof here.]
+\addcontentsline{toc}{section}{Exercise X.X} % Add to TOC even though unnumbered
+
+% Example structure for different types of proofs:
+
+% For direct proofs:
+% \begin{proof}
+%     [Write your formal proof here.]
+% \end{proof}
+
+% For proof by contradiction:
+% \begin{proof}[Proof by Contradiction]
+%     Assume for the sake of contradiction that [negation of what we want to prove].
+%     [Derive contradiction]
+%     This is a contradiction. \contradiction
+%     Therefore, [original statement] must be true.
+% \end{proof}
+
+% For proof by cases:
+% \begin{proof}
+%     We consider two cases:
+%     
+%     \case{1} [First case condition]
+%     [Proof for first case]
+%     
+%     \case{2} [Second case condition] 
+%     [Proof for second case]
+%     
+%     In both cases, [conclusion]. Therefore, [original statement] is true.
+% \end{proof}
+
+% Example exercise solution:
+\begin{solution}
+    Write your formal proof here using the custom scommands defined in \texttt{custom\_commands.tex}.
+    
+    For example: Let $A, B \subset \R$ such that $A \intersection B = \emptySet$. 
+    We want to prove that $A \union B = A \cup B \setminus (A \intersection B)$.
+    
+    Since $A \intersection B = \emptySet$, we have $A \cup B \setminus (A \intersection B) = A \cup B \setminus \emptySet = A \cup B$.
+    
+    Therefore, $A \union B = A \cup B$ as desired. \qed
+\end{solution}
+
+% ============================================================================
+% ADDITIONAL EXERCISES
+% ============================================================================
+
+\section*{Exercise X.Y}
+\addcontentsline{toc}{section}{Exercise X.Y}
+
+\begin{solution}
+    [Another proof here]
+\end{solution}
+
+% ============================================================================
+% REFERENCES (if needed)
+% ============================================================================
+% \begin{thebibliography}{9}
+% \bibitem{velleman}
+% Velleman, Daniel J. \textit{How to Prove It: A Structured Approach}. 
+% Cambridge University Press, 2nd edition, 2006.
+% \end{thebibliography}
 
 \end{document}
